@@ -5,6 +5,7 @@ import { Link} from 'react-router-dom'
 export default function Home() {
     const [users,setUser] = useState([])
 
+    axios.defaults.withCredentials = true;
     useEffect(()=>{
         axios.get('https://vercel.com/james-os-projects/employee-mern-api/')
         .then(res=>setUser(res.data))

@@ -10,6 +10,7 @@ export default function Create() {
     const [password, setPassword] = useState()
     const navigate = useNavigate()
 
+    axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
         // axios.post('http://localhost:8081/create', { name, email, password, age, city })

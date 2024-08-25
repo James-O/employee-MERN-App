@@ -5,6 +5,7 @@ export default function Image() {
     const [file,setFile]=useState()
     const [image, setImage] = useState()
 
+    axios.defaults.withCredentials = true;
     const handleUpload =(e)=>{
         const formdata = new FormData()
         formdata.append('file',file)

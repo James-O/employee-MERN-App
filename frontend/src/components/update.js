@@ -10,6 +10,7 @@ export default function Update() {
     const [city, setCity]=useState()
     const navigate = useNavigate()
 
+    axios.defaults.withCredentials = true;
     useEffect(()=>{
         axios.get('https://vercel.com/james-os-projects/employee-mern-api/getuser/'+id)
         .then(result=>{

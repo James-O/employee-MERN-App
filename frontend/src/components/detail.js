@@ -10,6 +10,7 @@ export default function Detail() {
     const [city, setCity]=useState()
     //const [password, setPassword]=useState()
 
+    axios.defaults.withCredentials = true;
     useEffect(()=>{
         axios.get('https://vercel.com/james-os-projects/employee-mern-api/getuser/'+id)
         .then(result=>{
