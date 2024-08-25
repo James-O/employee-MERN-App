@@ -9,7 +9,7 @@ const ImageModel = require('./models/image')
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin:[''],
+    origin:['https://employee-mern-frontend.vercel.app/'],
     methods:["POST","GET","PUT","DELETE"],
     credentials:true
 }))
