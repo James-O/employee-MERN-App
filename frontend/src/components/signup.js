@@ -19,7 +19,7 @@ export default function Signup() {
     axios.defaults.withCredentials = true;
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post('https://vercel.com/james-os-projects/employee-mern-api/register',{name,email,password},config)
+        axios.post('https://employee-mern-api.vercel.app/register',{name,email,password},config)
         .then(result=>{
             console.log(result)
             navigate('/login')

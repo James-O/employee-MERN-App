@@ -10,12 +10,12 @@ export default function Image() {
         const formdata = new FormData()
         formdata.append('file',file)
         // axios.post('http://localhost:8081/upload', formdata)
-        axios.post('https://vercel.com/james-os-projects/employee-mern-api/upload', formdata)
+        axios.post('https://employee-mern-api.vercel.app/upload', formdata)
        .then(res=>console.log(res))
        .catch(err=>console.log(err))
     }
      useEffect(()=>{
-        axios.get('https://vercel.com/james-os-projects/employee-mern-api/getimage')
+        axios.get('https://employee-mern-api.vercel.app/getimage')
        .then(res=>setImage(res.data[1].image))
        .catch(err=>console.log(err))
      },[])
@@ -25,7 +25,7 @@ export default function Image() {
         <button onClick={handleUpload}>upload</button>
         <br/>
         <div className='m-5'>
-            <img src={'https://vercel.com/james-os-projects/employee-mern-api/images/'+image} alt='image'/>
+            <img src={'https://employee-mern-api.vercel.app/images/'+image} alt='image'/>
         </div>
     </div>
   )

@@ -12,7 +12,7 @@ export default function Update() {
 
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        axios.get('https://vercel.com/james-os-projects/employee-mern-api/getuser/'+id)
+        axios.get('https://employee-mern-api.vercel.app/getuser/'+id)
         .then(result=>{
             console.log(result)
             setName(result.data.name)
@@ -25,7 +25,7 @@ export default function Update() {
 
     const handleUpdate=(e)=>{
         e.preventDefault()
-        axios.put('https://vercel.com/james-os-projects/employee-mern-api/update/'+ id,{name,email,age,city})
+        axios.put('https://employee-mern-api.vercel.app/update/'+ id,{name,email,age,city})
         .then(result=>{
             console.log(result)
             navigate('/home')

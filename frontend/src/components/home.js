@@ -7,7 +7,7 @@ export default function Home() {
 
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        axios.get('https://vercel.com/james-os-projects/employee-mern-api/')
+        axios.get('https://employee-mern-api.vercel.app/')
         .then(res=>setUser(res.data))
         .catch(err=>console.log(err))
     },[])

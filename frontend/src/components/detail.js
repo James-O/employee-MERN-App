@@ -12,7 +12,7 @@ export default function Detail() {
 
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        axios.get('https://vercel.com/james-os-projects/employee-mern-api/getuser/'+id)
+        axios.get('https://employee-mern-api.vercel.app/getuser/'+id)
         .then(result=>{
             console.log(result)
             setName(result.data.name)

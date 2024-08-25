@@ -10,7 +10,7 @@ export default function Login() {
     axios.defaults.withCredentials = true;
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post('https://vercel.com/james-os-projects/employee-mern-api/login',{email,password})
+        axios.post('https://employee-mern-api.vercel.app/login',{email,password})
         .then(result=>{
             console.log(result)
             if(result.data ==='success'){
