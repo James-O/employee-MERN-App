@@ -8,10 +8,18 @@ export default function Signup() {
     const [password, setPassword]=useState()
     const navigate = useNavigate()
 
+    let config={
+        headers: {
+            "Content-Type": "application/json",
+            'Access-Control-Allow-Origin': '*',
+            "Access-Control-Allow-Methods": "POST,GET,OPTIONS, PUT, DELETE",
+            "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization"
+            }
+    }
     axios.defaults.withCredentials = true;
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post('https://vercel.com/james-os-projects/employee-mern-api/register',{name,email,password})
+        axios.post('https://vercel.com/james-os-projects/employee-mern-api/register',{name,email,password},config)
         .then(result=>{
             console.log(result)
             navigate('/login')
