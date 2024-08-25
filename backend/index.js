@@ -16,7 +16,7 @@ app.use(cors({
 app.use(express.static('public'))
 
 // mongoose.connect('mongodb://localhost:27017/employee')
-mongoose.connect('mongodb+srv://James:jamesdgr81A!@atlascluster.vzvs9.mongodb.net/')
+mongoose.connect('mongodb+srv://James:jamesdgr81A!@atlascluster.vzvs9.mongodb.net/employee')
 
 //uploading images
 const store = multer.diskStorage({
