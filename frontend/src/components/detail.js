@@ -11,7 +11,7 @@ export default function Detail() {
     //const [password, setPassword]=useState()
 
     useEffect(()=>{
-        axios.get('http://localhost:8081/getuser/'+id)
+        axios.get('https://vercel.com/james-os-projects/employee-mern-api/getuser/'+id)
         .then(result=>{
             console.log(result)
             setName(result.data.name)

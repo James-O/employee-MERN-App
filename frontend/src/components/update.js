@@ -11,7 +11,7 @@ export default function Update() {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        axios.get('http://localhost:8081/getuser/'+id)
+        axios.get('https://vercel.com/james-os-projects/employee-mern-api/getuser/'+id)
         .then(result=>{
             console.log(result)
             setName(result.data.name)
@@ -24,7 +24,7 @@ export default function Update() {
 
     const handleUpdate=(e)=>{
         e.preventDefault()
-        axios.put('http://localhost:8081/update/'+ id,{name,email,age,city})
+        axios.put('https://vercel.com/james-os-projects/employee-mern-api/update/'+ id,{name,email,age,city})
         .then(result=>{
             console.log(result)
             navigate('/home')
